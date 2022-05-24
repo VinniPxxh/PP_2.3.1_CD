@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c4e13e-899c-440d-9a24-209893f50055" name="Changes" comment="Sometimes you have to start all over again">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/config/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/config/WebConfig.java" afterDir="false" />
+    <list default="true" id="20c4e13e-899c-440d-9a24-209893f50055" name="Changes" comment="configurers">
       <change afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/AppConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +162,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653369386752</updated>
-      <workItem from="1653369391880" duration="1181000" />
+      <workItem from="1653369391880" duration="1818000" />
     </task>
     <task id="LOCAL-00001" summary="Sometimes you have to start all over again">
       <created>1653369860330</created>
@@ -177,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653369860330</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="configurers">
+      <created>1653370782161</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653370782161</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +197,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sometimes you have to start all over again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sometimes you have to start all over again" />
+    <MESSAGE value="configurers" />
+    <option name="LAST_COMMIT_MESSAGE" value="configurers" />
   </component>
 </project>
