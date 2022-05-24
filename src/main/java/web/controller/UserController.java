@@ -3,10 +3,7 @@ package web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import web.model.User;
 import web.service.UserService;
 
@@ -16,27 +13,22 @@ public class UserController {
     private UserService userService;
 
     @Autowired
-    public UserService getUserService() {
-        return userService;
-    }
-
-    @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
 
-    @GetMapping(value = "users")
+    @GetMapping(value = "/users")
     public String listUsers(Model model) {
         model.addAttribute("allUsers", userService.getAllUsers());
         return "users";
     }
 
-    @GetMapping(value = "new")
+    @GetMapping(value = "/new")
     public String newUser(@ModelAttribute User user) {
         return "new";
     }
 
-    @PostMapping(value = "userAdd")
+    @PostMapping(value = "/userAdd")
     public String addUser(@ModelAttribute User user) {
         userService.createUser(user);
         return "redirect:/users";
