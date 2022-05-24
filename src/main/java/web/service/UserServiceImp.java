@@ -5,40 +5,41 @@ import org.springframework.stereotype.Service;
 import web.dao.UserDao;
 import web.model.User;
 
+import javax.transaction.Transactional;
 import java.util.List;
 @Service
 public class UserServiceImp implements UserService {
 
     @Autowired
-    private final UserDao userDao;
+    private UserDao userDao;
 
-    @Autowired
-    public UserServiceImp(UserDao userDao) {
-        this.userDao = userDao;
+    @Transactional
+    @Override
+    public void addUser(User user) {
+        userDao.addUser(user);
     }
 
+    @Transactional
+    @Override
+    public void deleteUser(User user) {
+        userDao.deleteUser(user);
+    }
+
+    @Transactional
+    @Override
+    public void updateUser(long id, User user) {
+        userDao.updateUser(id, user);
+    }
+
+    @Transactional
     @Override
     public List<User> getAllUsers() {
         return userDao.getAllUsers();
     }
 
+    @Transactional
     @Override
-    public User getUser(int id) {
-        return userDao.getUser(id);
-    }
-
-    @Override
-    public void createUser(User user) {
-        userDao.createUser(user);
-    }
-
-    @Override
-    public void updateUser(User user) {
-        userDao.updateUser(user);
-    }
-
-    @Override
-    public void deleteUser(int id) {
-        userDao.deleteUser(id);
+    public User getUserById(long id) {
+        return userDao.getUserById(id);
     }
 }

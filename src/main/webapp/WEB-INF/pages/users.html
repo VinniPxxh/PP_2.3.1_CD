@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>USERS</title>
@@ -19,16 +18,18 @@
                 <button><a href="/new">NEW</a></button>
             </th>
         </tr>
-        <tr th:each="user:${allUsers}">
-            <td th:text="${user.name}"></td>
-            <td th:text="${user.surname}"></td>
-            <td th:text="${user.email}"></td>
-            <td th:text="${user.salary}"></td>
+        <tr th:each ="user : ${users}">
+            <td th:utext="${user.id}">...</td>
+            <td th:text="${user.name}">...</td>
+            <td th:utext="${user.surname}">...</td>
+            <td th:utext="${user.email}">...</td>
+            <td th:utext="${user.salary}">...</td>
+            <td><a th:href="@{/{id}/edit(id=${user.getId()})}">Edit</a></td>
             <td>
                 <button><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></button>
             </td>
             <td>
-                <button><a th:href="@{/remove/{id}(id=${user.id})}">Delete</a></button>
+                <button><a th:action="@{/{id}(id=${user.getId()})}">Delete</a></button>
             </td>
         </tr>
     </table>

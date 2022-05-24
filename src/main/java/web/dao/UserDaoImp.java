@@ -5,6 +5,8 @@ import web.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -12,28 +14,38 @@ public class UserDaoImp implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager;
-    @Override
-    public List<User> getAllUsers() {
-        return entityManager.createQuery("from  User", User.class).getResultList();
-    }
 
     @Override
-    public User getUser(int id) {
-        return entityManager.find(User.class, id);
-    }
-
-    @Override
-    public void createUser(User user) {
+    public void addUser(User user) {
         entityManager.persist(user);
     }
 
     @Override
-    public void updateUser(User user) {
-        entityManager.merge(user);
+    public void deleteUser(User user) {
+        entityManager.remove(entityManager.find(User.class, user.getId()));
     }
 
     @Override
-    public void deleteUser(int id) {
-        entityManager.remove(entityManager.find(User.class,id));
+    public void updateUser(long id, User user) {
+        Query query = entityManager.
+                createNativeQuery("UPDATE users SET name = :name , surname = :surname, email = :email , salary = :salary WHERE id = :id");
+        query.setParameter("name", user.getName());
+        query.setParameter("surname", user.getSurname());
+        query.setParameter("email", user.getEmail());
+        query.setParameter("id", id);
+        query.executeUpdate();
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u", User.class);
+        return query.getResultList();
+    }
+
+    @Override
+    public User getUserById(long id) {
+        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u WHERE u.id = :id", User.class);
+        query.setParameter("id", id);
+        return query.getSingleResult();
     }
 }
