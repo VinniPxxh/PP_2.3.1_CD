@@ -26,7 +26,7 @@ public class UserDaoImp implements UserDao {
     }
 
     @Override
-    public void updateUser(long id, User user) {
+    public void updateUser(int id, User user) {
         Query query = entityManager.
                 createNativeQuery("UPDATE users SET name = :name , surname = :surname, email = :email , salary = :salary WHERE id = :id");
         query.setParameter("name", user.getName());
