@@ -44,11 +44,10 @@ public class UserController {
         return "edit";
     }
 
-    @PostMapping(value = "/userUpdate")
     @PatchMapping("/{id}")
-    public String updateUser(@ModelAttribute("user") User user, @PathVariable("id")int id) {
+    public String editUser(@ModelAttribute("user") User user, @PathVariable("id") int id) {
         userService.updateUser(id, user);
-        return "redirect:/users";
+        return "redirect:/home/users";
     }
 
     @GetMapping(value = "/remove/{id}")
