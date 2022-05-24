@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>EDIT USER</title>
 </head>
 <body>
-
+<br>
+<div align="center">
+    <h2>Edit User</h2>
+    <form th:action="@{/userUpdate}" th:object="${user}" method="post">
+        <table border="5" cellpadding="15">
+            <tr>
+                <td>ID:</td>
+                <td><input type="number" th:field="${user.id}" readonly/></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" th:field="${user.name}"/></td>
+            </tr>
+            <tr>
+                <td>Surname:</td>
+                <td><input type="text" th:field="${user.lastName}"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" th:field="${user.email}"/></td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+                <td><input type="text" th:field="${user.cash}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Update"></td>
+            </tr>
+        </table>
+    </form>
+</div>
 </body>
 </html>

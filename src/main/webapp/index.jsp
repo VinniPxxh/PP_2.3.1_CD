@@ -1,5 +1,8 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<br>
+<div align="center">
+    <h2><a href="/users">USER LIST HERE<br></a></h2>
+</div>
 </body>
 </html>

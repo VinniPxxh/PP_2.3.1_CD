@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c4e13e-899c-440d-9a24-209893f50055" name="Changes" comment="Dao and Service created">
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
+    <list default="true" id="20c4e13e-899c-440d-9a24-209893f50055" name="Changes" comment="pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -51,6 +54,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -72,7 +76,7 @@
       <deployment>
         <artifact name="PP_2.3.1_CD:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/PP_2_3_1_CD_war_exploded" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
@@ -163,7 +167,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653369386752</updated>
-      <workItem from="1653369391880" duration="4246000" />
+      <workItem from="1653369391880" duration="5680000" />
     </task>
     <task id="LOCAL-00001" summary="Sometimes you have to start all over again">
       <created>1653369860330</created>
@@ -200,7 +204,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653372486760</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="UserController created">
+      <created>1653373830646</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653373830646</updated>
+    </task>
+    <task id="LOCAL-00007" summary="pages">
+      <created>1653373906903</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653373906903</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +240,8 @@
     <MESSAGE value="configurers" />
     <MESSAGE value="User class created" />
     <MESSAGE value="Dao and Service created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dao and Service created" />
+    <MESSAGE value="UserController created" />
+    <MESSAGE value="pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="pages" />
   </component>
 </project>
