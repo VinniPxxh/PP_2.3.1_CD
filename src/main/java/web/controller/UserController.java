@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/userAdd")
-    public String addUser(@ModelAttribute User user) {
+    public String addUser(@ModelAttribute("user") User user) {
         userService.addUser(user);
         return "redirect:/home/users";
     }
@@ -61,7 +61,7 @@ public class UserController {
     @GetMapping("/{id}")
     public String getUserById(@PathVariable("id") long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
-        return "UserPage";
+        return "edit";
     }
 
 }

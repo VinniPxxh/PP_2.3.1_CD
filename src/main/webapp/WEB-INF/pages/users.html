@@ -9,7 +9,9 @@
 <div th:align="center" class="tg">
     <h2>User List</h2>
     <table border="5" cellpadding="15">
+
         <tr>
+            <th>ID</th>
             <th>NAME</th>
             <th>SURNAME</th>
             <th>EMAIL</th>
@@ -24,14 +26,10 @@
             <td th:utext="${user.surname}">...</td>
             <td th:utext="${user.email}">...</td>
             <td th:utext="${user.salary}">...</td>
-            <td><a th:href="@{/home/{id}/edit(id=${user.getId()})}">Edit</a></td>
-            <td>
-                <button><a th:href="@{/home/edit/{id}(id=${user.getId()})}">Edit</a></button>
+            <td><button><a th:href="@{/home/{id}(id=${user.getId()})}">Edit</a></button></td>
+            <td><button><a th:href="@{/home/remove/{id}(id=${user.id})}">Delete</a></button></td>
             </td>
-            <td>
-                <button><a th:action="@{/home/{id}(id=${user.getId()})}">Delete</a></button>
-            </td>
-        </tr>
+        </tr>[
     </table>
 </div>
 </body>
