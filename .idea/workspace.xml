@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c4e13e-899c-440d-9a24-209893f50055" name="Changes" comment="User class created">
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/dao/UserDaoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImp.java" afterDir="false" />
+    <list default="true" id="20c4e13e-899c-440d-9a24-209893f50055" name="Changes" comment="Dao and Service created">
+      <change afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653369386752</updated>
-      <workItem from="1653369391880" duration="3026000" />
+      <workItem from="1653369391880" duration="4246000" />
     </task>
     <task id="LOCAL-00001" summary="Sometimes you have to start all over again">
       <created>1653369860330</created>
@@ -196,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653371395480</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Dao and Service created">
+      <created>1653372486760</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653372486760</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +221,7 @@
     <MESSAGE value="Sometimes you have to start all over again" />
     <MESSAGE value="configurers" />
     <MESSAGE value="User class created" />
-    <option name="LAST_COMMIT_MESSAGE" value="User class created" />
+    <MESSAGE value="Dao and Service created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dao and Service created" />
   </component>
 </project>
