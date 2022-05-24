@@ -20,16 +20,20 @@
                 <button><a href="/home/new">NEW</a></button>
             </th>
         </tr>
-        <tr th:each ="user : ${users}">
+        <tr th:each="user : ${users}">
             <td th:utext="${user.id}">...</td>
             <td th:text="${user.name}">...</td>
             <td th:utext="${user.surname}">...</td>
             <td th:utext="${user.email}">...</td>
             <td th:utext="${user.salary}">...</td>
-            <td><button><a th:href="@{/home/{id}(id=${user.getId()})}">Edit</a></button></td>
-            <td><button><a th:href="@{/home/remove/{id}(id=${user.id})}">Delete</a></button></td>
+            <td>
+                <button><a th:href="@{/home/{id}(id=${user.getId()})}">Edit</a></button>
             </td>
-        </tr>[
+            <td>
+                <button><a th:href="@{/home/remove/{id}(id=${user.id})}">Delete</a></button>
+            </td>
+            </td>
+        </tr>
     </table>
 </div>
 </body>

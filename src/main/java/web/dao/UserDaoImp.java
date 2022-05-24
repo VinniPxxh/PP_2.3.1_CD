@@ -32,7 +32,8 @@ public class UserDaoImp implements UserDao {
         query.setParameter("name", user.getName());
         query.setParameter("surname", user.getSurname());
         query.setParameter("email", user.getEmail());
-        query.setParameter("id", id);
+        query.setParameter("id", user.getId());
+        query.setParameter("salary", user.getSalary());
         query.executeUpdate();
     }
 
@@ -44,7 +45,7 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public User getUserById(long id) {
-        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u WHERE u.id = :id", User.class);
+        TypedQuery<User> query = entityManager.createQuery("SELECT user FROM User user WHERE user.id = :id", User.class);
         query.setParameter("id", id);
         return query.getSingleResult();
     }
