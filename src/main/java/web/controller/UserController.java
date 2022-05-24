@@ -10,6 +10,7 @@ import web.service.UserService;
 import java.util.List;
 
 @Controller
+@RequestMapping("/home")
 public class UserController {
 
     private UserService userService;
@@ -27,35 +28,34 @@ public class UserController {
     }
 
     @GetMapping(value = "/new")
-    public String newUser(@ModelAttribute("user") Model model) {
-        model.addAttribute("user", new User());
+    public String newUser(@ModelAttribute("user") User user) {
         return "new";
     }
 
     @PostMapping(value = "/userAdd")
     public String addUser(@ModelAttribute User user) {
         userService.addUser(user);
-        return "redirect:/users";
+        return "redirect:/home/users";
     }
 
     @GetMapping(value = "/{id}/edit")
     public String editUser(@PathVariable long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
-        return "/edit";
+        return "edit";
     }
 
     @PostMapping(value = "/userUpdate")
     @PatchMapping("/{id}")
     public String updateUser(@ModelAttribute("user") User user, @PathVariable("id")long id) {
         userService.updateUser(id, user);
-        return "redirect:/users";
+        return "redirect:/home/users";
     }
 
     @GetMapping(value = "/remove/{id}")
     @DeleteMapping("/{id}")
     public String removeUser(@PathVariable int id) {
         userService.deleteUser(userService.getUserById(id));
-        return "redirect:/users";
+        return "redirect:/home/users";
     }
 
     @GetMapping("/{id}")
