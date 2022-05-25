@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class UserServiceImp implements UserService {
 
-    private UserDao userDao;
+    private final UserDao userDao;
 
     @Autowired
     public UserServiceImp(UserDao userDao) {
@@ -32,8 +32,8 @@ public class UserServiceImp implements UserService {
 
     @Transactional
     @Override
-    public void updateUser(int id, User user) {
-        userDao.updateUser(id, user);
+    public void updateUser(User user) {
+        userDao.updateUser(user);
     }
 
     @Transactional
